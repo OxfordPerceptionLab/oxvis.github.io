@@ -334,6 +334,10 @@
       }
     }, 2500);
   })();
+  // Reload iframes on the initially active page on first load
+  window.addEventListener('load', function() {
+    document.querySelectorAll('.page.active iframe').forEach(function(f) { f.src = f.src; });
+  });
 </script>
 </body>
 </html>
