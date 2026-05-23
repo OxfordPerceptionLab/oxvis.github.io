@@ -296,6 +296,7 @@
       history.replaceState(null, '', '#' + id);
     }
     window.scrollTo({ top: 0 });
+    document.getElementById(id).querySelectorAll('iframe').forEach(function(f) { f.src = f.src; });
   }
 
   window.addEventListener('hashchange', function () {
